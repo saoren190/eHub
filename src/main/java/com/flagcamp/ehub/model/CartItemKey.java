@@ -3,38 +3,35 @@ package com.flagcamp.ehub.model;
 import javax.persistence.*;
 import java.io.Serializable;
 import java.util.Objects;
+import java.util.UUID;
 
 @Embeddable
 public class CartItemKey implements Serializable {
 
-    @ManyToOne
-    @JoinColumn(name = "item_id")
-    private Item item;
+    private UUID item;
 
-    @ManyToOne
-    @JoinColumn(name = "username")
-    private User buyer;
+    private String buyer;
 
     public CartItemKey(){}
 
-    public CartItemKey(Item item, User buyer) {
+    public CartItemKey(UUID item, String buyer) {
         this.item = item;
         this.buyer = buyer;
     }
 
-    public Item getItem() {
+    public UUID getItem() {
         return item;
     }
 
-    public void setItem(Item item) {
+    public void setItem(UUID item) {
         this.item = item;
     }
 
-    public User getBuyer() {
+    public String getBuyer() {
         return buyer;
     }
 
-    public void setBuyer(User buyer) {
+    public void setBuyer(String buyer) {
         this.buyer = buyer;
     }
 

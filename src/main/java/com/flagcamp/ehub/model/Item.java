@@ -23,10 +23,10 @@ public class Item {
     @JoinColumn(name = "username")
     private User owner;
 
-    @OneToMany(mappedBy = "Item", cascade = CascadeType.ALL, fetch = FetchType.EAGER)
+    @OneToMany(mappedBy = "item", cascade = CascadeType.ALL, fetch = FetchType.EAGER)
     private List<ItemImage> images;
 
-    @OneToMany(mappedBy = "Item", cascade = CascadeType.ALL, fetch = FetchType.LAZY)
+    @OneToMany(mappedBy = "item", cascade = CascadeType.ALL, fetch = FetchType.LAZY)
     private List<CartItem> carts;
 
     public Item() {}

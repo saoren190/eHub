@@ -1,16 +1,14 @@
 package com.flagcamp.ehub.model;
 
-import javax.persistence.Entity;
-import javax.persistence.Id;
-import javax.persistence.JoinColumn;
-import javax.persistence.ManyToOne;
+import javax.persistence.*;
 import java.time.LocalDateTime;
 import java.util.UUID;
 
 @Entity
-public class Order {
+public class History {
 
     @Id
+    @GeneratedValue
     private UUID order_id;
 
     @ManyToOne
@@ -23,7 +21,7 @@ public class Order {
 
     private LocalDateTime checkOutTime;
 
-    public Order(){}
+    public History(){}
 
     public UUID getOrder_id() {
         return order_id;
