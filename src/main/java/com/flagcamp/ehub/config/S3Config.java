@@ -30,5 +30,4 @@ public class S3Config {
                 .withRegion(s3RegionName)
                 .build();
     }
-
 }

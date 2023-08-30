@@ -12,7 +12,12 @@ public class ItemImage {
     @JoinColumn(name = "item_id")
     private Item item;
 
-    public ItemImage(){}
+    public ItemImage() {}
+
+    public ItemImage(String url, Item item) {
+        this.url = url;
+        this.item = item;
+    }
 
     public String getUrl() {
         return url;
